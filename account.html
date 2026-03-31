@@ -2,30 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>User Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout & Shipping</title>
 </head>
 <body>
   <header>
-    <h1>Welcome, User!</h1>
+    <h1>Checkout</h1>
     <nav>
-      <ul>
-        <li><a href="#">Order History</a></li>
-        <li><a href="#">Profile Settings</a></li>
-        <li><a href="#">Wishlist</a></li>
-      </ul>
+      <a href="shopping-cart.html">Back to Cart</a> |
+      <a href="index.html">Home</a>
     </nav>
   </header>
 
-  <dl>
-    <dt>Order 001</dt>
-    <dd>Details of order...</dd>
-    <dt>Order 002</dt>
-    <dd>Details of order...</dd>
-  </dl>
+  <main>
+    <section>
+      <h2>Checkout Process</h2>
+      <form action="#" method="POST">
 
-  <details>
-    <summary>Order 003</summary>
-    <p>More information about order 003</p>
-  </details>
+        <fieldset>
+          <legend>Shipping Address</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br/>
+          <label for="street">Street:</label>
+          <input type="text" id="street" name="street" required /><br/>
+          <label for="zip">ZIP Code:</label>
+          <input type="text" id="zip" name="zip" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment Details</legend>
+          <label><input type="radio" name="payment" value="credit-card" required /> Credit Card</label><br/>
+          <label><input type="radio" name="payment" value="paypal" /> PayPal</label><br/>
+        </fieldset>
+
+        <aside style="position: fixed; right: 0; top: 0; width: 200px; background: #f0f0f0; padding: 10px;">
+          <h3>Order Summary</h3>
+          <p>Total: $79.97</p>
+          <button type="submit">Place Order</button>
+        </aside>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Product Store</p>
+  </footer>
 </body>
 </html>
